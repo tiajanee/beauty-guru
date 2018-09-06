@@ -16,7 +16,7 @@ import json
 # '''retrieves the brand name'''
 # get_brand():
 # url_path = 
-req = Request('https://www.sephora.com/new-makeup', headers={'User-Agent': 'Mozilla/5.0'})
+req = Request('https://www.sephora.com/new-makeup', headers={'User-Agent': 'Chrome/5.0'})
 
 page = urlopen(req)
 soup = BeautifulSoup(page, 'html.parser')
@@ -25,12 +25,24 @@ soup.prettify()
 # pprint.pprint(soup)
 soup.getText()
 
-spans = (soup.find('div', {"class":"Main-content"}))
-text = spans.findAll('span', {"class": "u-hide"})[1]['data-json']
-json_text = json.loads(text)
-# print(json_text)
-for keys in json_text:
-	print(json_text['sku_list'])
+#EXTRACTING JSON
+
+# spans = (soup.find('div', {"class":"Main-content"}))
+# text = spans.findAll('span', {"class": "u-hide"})[1]['data-json']
+# json_text = json.loads(text)
+# # pprint.pprint(json_text)
+# pprint.pprint(json_text['sku_list'])
+
+
+#EXTRACTING HTML
+
+data = soup.find("span", {"class": "brand"})
+if data is not None:
+	print("yeer")
+# print(data)
+
+
+
 # new_text = text.replace("&quot", " ")
 # huh_text = new_text.replace("'", "")
 # newer_text = new_text.replace(";", "")
