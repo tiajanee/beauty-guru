@@ -54,7 +54,11 @@ while page_count < len(NEWPROD_PAGE_LINKS):
 		product_title = json_text['name']
 		product_brand = json_text['brand']
 		product_price = json_text['offers']['price']
-		print(product_title, product_brand, '$'+ product_price)
+		product_img = json_text['image']
+		print('product: ' + product_title)
+		print('brand: ' + product_brand)
+		print('price: $' + product_price)
+		print(product_img)
 		
 		if n < len(nav_to_links):
 			n += 1
