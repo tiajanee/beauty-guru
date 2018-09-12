@@ -15,11 +15,12 @@ BASE_URL = 'https://www.ulta.com/new-beauty-products?N=6Z26y1&No='
 
 NEWPROD_PAGE_LINKS = ['0&Nrpp=96', '96&Nrpp=96', '192&Nrpp=96', '288&Nrpp=96', '384&Nrpp=96']
 page_count = 0
+
 while page_count < len(NEWPROD_PAGE_LINKS):
 
-	req = Request(BASE_URL+NEWPROD_PAGE_LINKS[page_count], headers={'User-Agent': 'Chrome/5.0'})
+	page_req = Request(BASE_URL+ NEWPROD_PAGE_LINKS[page_count], headers={'User-Agent': 'Chrome/5.0'})
 
-	page = urlopen(req)
+	page = urlopen(page_req)
 	soup = BeautifulSoup(page, 'html.parser')
 	soup.prettify()
 
@@ -42,12 +43,12 @@ while page_count < len(NEWPROD_PAGE_LINKS):
 	n = 0
 	for link in nav_to_links:
 		print(link)
-		new_req = Request(nav_to_links[n])
-		new_page = urlopen(new_req)
-		new_soup = BeautifulSoup(new_page, 'html.parser')
+		prod_req = Request(nav_to_links[n])
+		prod_page = urlopen(prod_req)
+		prod_soup = BeautifulSoup(prod_page, 'html.parser')
 
 		#scrapes script tag for JSON data
-		text = new_soup.find('script', {'type':'application/ld+json'})
+		text = prod_soup.find('script', {'type':'application/ld+json'})
 		json_text = json.loads(text.getText())
 
 		#extracts relevant product information
@@ -62,5 +63,6 @@ while page_count < len(NEWPROD_PAGE_LINKS):
 		
 		if n < len(nav_to_links):
 			n += 1
+
 	page_count += 1
 
