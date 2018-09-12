@@ -1,0 +1,61 @@
+#first{
+    color: palevioletred;
+    opacity: 0.60;
+    position: absolute;
+    left: 450px;
+    z-index: -1;
+
+}
+
+#last {
+    color: blue;
+    opacity: 0.40;
+    position: absolute;
+    left: 455px;
+    padding-left: -5px;
+}
+
+#first, #last {
+    top: 30px;
+    letter-spacing: 12px;
+    font: 40px Ultra, Arial;
+    top: 30px;
+    border: none;
+    background-color: none;
+}
+
+html {
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+
+#form {
+    top: 250px;
+    left: 575px;
+    display: block;
+    position: relative;
+    align-self: center;
+    font: Arial;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+#fnametext, #lnametext {
+    padding: 5px;
+    margin: 10px;
+    font: Arial;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    width: 200px;
+}
+
+#pricelbl {
+    font: Ultra;
+    letter-spacing: 0.15em;
+    margin: 10px;
+}
+
+#priceopp {
+    padding: 2px;
+    margin: 10px;
+}
