@@ -17,13 +17,11 @@ import json
 # get_brand():
 # url_path = 
 req = Request('https://www.sephora.com/new-makeup', headers={'User-Agent': 'Chrome/5.0'})
-
 page = urlopen(req)
 soup = BeautifulSoup(page, 'html.parser')
 soup.prettify()
 
 # pprint.pprint(soup)
-soup.getText()
 
 #EXTRACTING JSON
 
@@ -35,28 +33,27 @@ soup.getText()
 
 
 #EXTRACTING HTML
-
-data = soup.find("span", {"class": "brand"})
-if data is not None:
-	print("yeer")
+lol = soup.find('a')
+print(lol)
+	# if lol is not None:
+	# 	for laugh in lol:
+	# 		a = laugh.find('a')
+	# 		print(a)
 # print(data)
+# if data is not None:
+# 	for title in data:
+# 		prod_link = title.find('a', href=True)
+# 		print(prod_link)
+# # print(data)
+# nav_to_links = []
 
+#concatenates extensions to base link, aggregates the new product links into a list
 
+	# if prod_link:
+	# 	prod_href = str(prod_link.get('href'))
+	# 	print(prod_href)
+		#link compositions vary, if-statement accounts for edge case
+		# if prod_href[0] != 'h':
+		# 	prod_href = 'https://www.ulta.com' + prod_href
+		# nav_to_links.append(prod_href)
 
-# new_text = text.replace("&quot", " ")
-# huh_text = new_text.replace("'", "")
-# newer_text = new_text.replace(";", "")
-# product_list = (newer_text.split("},{"))
-
-# pprint.pprint(product_list)
-
-# print(text)
-
-# sub_soup = BeautifulSoup(str(spans))
-# post_soup = sub_soup.findAll("div",{"class":"SkuItem-info"})
-# if text is not None:
-# 	print("yerr")
-# else:
-# 	print("nurrr")
-# if __name__ == "__main__":
-#     main()
