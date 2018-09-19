@@ -52,7 +52,7 @@ html {
 #pricelbl {
     font: Ultra;
     letter-spacing: 0.15em;
-    margin: 10px;
+    left: 500px;
 }
 
 #priceopp {
