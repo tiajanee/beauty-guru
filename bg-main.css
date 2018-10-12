@@ -1,27 +1,71 @@
-#first{
-    color: palevioletred;
-    opacity: 0.60;
-    position: absolute;
-    left: 450px;
-    z-index: -1;
 
+
+
+
+.box {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+/*    grid-column: 4 / 9;*/
+    border-color: black;
 }
 
-#last {
-    color: blue;
-    opacity: 0.40;
-    position: absolute;
-    left: 455px;
-    padding-left: -5px;
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+/*    grid-template-rows: repeat(5, 100);*/
+/*
+    align-items: left;
+    justify-content: center;
+*/
+/*
+    justify-items:center;
+    align-items:center;
+*/
 }
 
-#first, #last {
+
+.a {
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+
+.box {
+    border-radius: 5px;
+    border: 2px dodgerblue solid;
+}
+
+#title{
     top: 30px;
     letter-spacing: 12px;
     font: 40px Ultra, Arial;
-    top: 30px;
     border: none;
-    background-color: none;
+    background-color: whitesmoke;
+/*    height: 100px;*/
+    color: palevioletred;
+    opacity: 0.60;
+}
+
+.b {
+    justify-self: left;
+    width: 50%;
+
+}
+
+.c {
+    justify-self: center;
+    width: 180%;
+    height: 600px;
+
+}
+
+.d {
+    justify-self: right;
+    width: 50%;
 }
 
 html {
@@ -30,32 +74,29 @@ html {
 }
 
 #form {
-    top: 250px;
-    left: 575px;
     display: block;
-    position: relative;
-    align-self: center;
     font: Arial;
     font-weight: 700;
     letter-spacing: 0.15em;
+    padding: 50px;
+    position: fixed;
+    left: 350px;
+    top: 200px;
+    
 }
 
-#fnametext, #lnametext {
-    padding: 5px;
+#fnametext, #lnametext, #email, #age{
     margin: 10px;
-    font: Arial;
+    font: Futura;
     font-weight: 900;
     letter-spacing: 0.5em;
     width: 200px;
-}
-
-#pricelbl {
-    font: Ultra;
-    letter-spacing: 0.15em;
-    left: 500px;
+    left: 350px;
 }
 
 #priceopp {
-    padding: 2px;
+    font-family: Arial;
+    padding: 10px;
     margin: 10px;
+
 }
