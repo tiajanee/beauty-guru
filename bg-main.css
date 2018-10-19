@@ -12,7 +12,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(12, 100);
 /*    grid-template-rows: repeat(5, 100);*/
 /*
     align-items: left;
@@ -35,8 +35,7 @@
 
 
 .box {
-    border-radius: 5px;
-    border: 2px dodgerblue solid;
+    border-radius: 2px;
 }
 
 #title{
@@ -57,9 +56,14 @@
 }
 
 .c {
-    justify-self: center;
-    width: 180%;
-    height: 600px;
+/*    width: 180%;*/
+    height: 1000px;
+    background-color: #F6D7E1;
+    border: 2px black solid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    overflow: scroll;
+
 
 }
 
@@ -79,24 +83,45 @@ html {
     font-weight: 700;
     letter-spacing: 0.15em;
     padding: 50px;
-    position: fixed;
-    left: 350px;
-    top: 200px;
+    overflow: scroll;
+    
+
+    
     
 }
 
-#fnametext, #lnametext, #email, #age{
+#deetsLabel, #priceQ, #toneQ {
+    font-family: "Corbel";
+    color: #8C96E6;
+    letter-spacing: 0.3em;
+    font-size: 20px;
+}
+
+#fnametext, #lnametext, #email, #age, #country{
     margin: 10px;
     font: Futura;
     font-weight: 900;
     letter-spacing: 0.5em;
     width: 200px;
     left: 350px;
+    color: black;
+}
+
+#option1, #option2, #option3, #option4, #option5 {
+    font-family: "Corbel";
+    color: #8C96E6;
+    
 }
 
 #priceopp {
-    font-family: Arial;
-    padding: 10px;
+    padding: 2px;
     margin: 10px;
+    color: black;
 
 }
+label[id="option2"],label[id="option1"] {
+    display: block;
+}
+
+
+
