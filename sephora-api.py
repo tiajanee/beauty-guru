@@ -9,6 +9,8 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup, SoupStrainer
 import os
 import json
+import requests
+
 
 # def main():
 # 	get_brand()
@@ -16,37 +18,45 @@ import json
 # '''retrieves the brand name'''
 # get_brand():
 # url_path = 
-req = Request('https://www.sephora.com/new-makeup', headers={'User-Agent': 'Chrome/5.0'})
-page = urlopen(req)
-soup = BeautifulSoup(page, 'html.parser')
-soup.prettify()
 
-# pprint.pprint(soup)
-
-#EXTRACTING JSON
-
-# spans = (soup.find('div', {"class":"Main-content"}))
-# text = spans.findAll('span', {"class": "u-hide"})[1]['data-json']
-# json_text = json.loads(text)
-# # pprint.pprint(json_text)
-# pprint.pprint(json_text['sku_list'])
+headers = {'User-Agent':'Chrome/5.0'}
+request = requests.get('https://www.sephora.com/new-makeup', headers=headers,timeout=5)
+soup = BeautifulSoup(request.text, 'html5lib')
+pprint.pprint(soup)
+   
+str(soup).replace("&quot;", "")
+print(soup)
 
 
-#EXTRACTING HTML
-lol = soup.find('a')
-print(lol)
-	# if lol is not None:
-	# 	for laugh in lol:
-	# 		a = laugh.find('a')
-	# 		print(a)
-# print(data)
-# if data is not None:
-# 	for title in data:
-# 		prod_link = title.find('a', href=True)
-# 		print(prod_link)
-# # print(data)
-# nav_to_links = []
+# results = soup.find_all('meta')
+# for result in results:
+# if "itemprop" in str(result) and "image" in str(result):
+# print(result)
 
+
+
+# req = Request('https://www.sephora.com/new-makeup', headers={'User-Agent': 'Chrome/5.0'})
+# page = urlopen(req)
+# soup = BeautifulSoup(page, 'html.parser')
+# soup.prettify()
+
+
+
+# # pprint.pprint(soup)
+
+# #EXTRACTING JSON
+
+# #EXTRACTING HTML
+
+# containers =  soup.find("div", {"class":"Main-content"})
+# div = containers.find('div', {"class":"SkuGrid.ng-scope"})
+# print(div)
+# # pprint.pprint(containers.)
+
+# a = containers.findAll('div', attrs={"seph-sku-item"})
+# print(a)
+# for az in a:
+# 	pprint.pprint(a)
 #concatenates extensions to base link, aggregates the new product links into a list
 
 	# if prod_link:
