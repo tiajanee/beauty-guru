@@ -12,6 +12,7 @@
 .container {
     display: grid;
     grid-template-columns: repeat(12, 100);
+
  
 }
 
@@ -38,7 +39,6 @@ h1 {
     font-size: 15px;
     justify-self: center;
 }
-
 
 
 @font-face {
@@ -106,6 +106,8 @@ html {
     overflow-x: hidden;
     text-rendering: optimizeLegibility !important;
    ::-webkit-font-smoothing: antialiased !important;
+    cursor: url('2.cur'), auto;	
+
 }
 
 #form {
@@ -114,18 +116,56 @@ html {
     font-weight: 700;
     letter-spacing: 0.15em;
     padding: 50px;
+    cursor: url(2.cur), auto;
+
     
 
     
     
 }
 
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 #deetsLabel, #priceQ, #toneQ, #brandQ {
     font-family: "Corbel";
     color: #8C96E6;
     letter-spacing: 0.3em;
     font-size: 20px;
+    cursor: url(2.cur), auto;
 }
+
+
 
 #fnametext, #lnametext, #email, #age, #country{
     margin: 10px;
@@ -136,23 +176,16 @@ html {
     left: 350px;
     color: black;
     margin-left: 285px;
+    cursor: url(13.cur), auto;
 }
 
 #option1, #option2, #option3, #option4, #option5 {
     font-family: "Corbel";
     color: #8C96E6;
-    
-}
-
-#priceopp {
-    padding: 2px;
-    margin: 10px;
-    left: 350px;
-    margin-left: 20px;
-    color: black;
-    font-size: 70px;
 
 }
+
+
 label[id="option2"],label[id="option1"] {
     display: block;
 }
@@ -172,12 +205,18 @@ label[id="option2"],label[id="option1"] {
     margin-top: 40px;
     margin-left: 40px;
     display: inline-block;
+    cursor: url(6.cur), auto;
+
 }
 
 .square:hover {
     box-shadow: 0px 0px 40px 15px #47B0B5;
 
     
+}
+
+input[type='checkbox'], #option1, #option2, #option3, #option4, #option5 {
+    cursor: url(6.cur), auto;
 }
 
 
@@ -305,6 +344,7 @@ label[id="option2"],label[id="option1"] {
     font-family: "Corbel";
     color: #8C96E6;
     display:inline-table;
+    cursor: url(6.cur), auto;
 
     
 }
@@ -328,6 +368,7 @@ label[id="option2"],label[id="option1"] {
     width: 140px;
     font-weight: bold;
     opacity: .8;
+    cursor: url(6.cur), auto;
 
 }
 
