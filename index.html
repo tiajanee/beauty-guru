@@ -50,7 +50,7 @@
                     <input type="text" name="first_name" placeholder="first name" id="fnametext"> <br>
                     <input type="text" name="last_name" placeholder="last name" id="lnametext"> <br>
                     <input type="email" name="email" placeholder="email" id="email"><br>
-                    <input     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" name="age" placeholder="age" id="age" min="13" max="100" maxlength="2"><br>
+                    <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" name="age" placeholder="age" id="age" min="13" max="100" maxlength="2"><br>
                     <div class="custom-select">
                         <select id="country">
                             <option value="AF">Afghanistan</option>
@@ -310,8 +310,8 @@
                         </div>
 
                     <div class="formDiv">
-                    <div class="checkgroup">
                         <label id="priceQ">2. preferred price range (check all that apply):</label><br>
+                        <div class="checkgroup">
                         <label id="option1"><input type="checkbox" name="price_range" value="lowest" > $0-$10 </label>
                         <label id="option2"><input type="checkbox" name="price_range" value="low" > $10-$20 </label>
                         <label id="option3"><input type="checkbox" name="price_range" value="middle" > $20-$40 </label><br>
