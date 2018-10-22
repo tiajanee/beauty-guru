@@ -159,13 +159,37 @@ html {
 }
 #deetsLabel, #priceQ, #toneQ, #brandQ {
     font-family: "Corbel";
-    color: #8C96E6;
+    color: palevioletred;
     letter-spacing: 0.3em;
     font-size: 20px;
     cursor: url(2.cur), auto;
 }
 
+.formDiv {
+    padding-bottom: 30px;
+}
 
+
+#fnametext, #lnametext, #email, #age {
+    cursor: url(13.cur), auto;
+    border: 0;
+      outline: 0;
+      background: transparent;
+      border-bottom: 3px solid floralwhite;
+    width: 50px;
+    color: #47B0B5;
+    font-size: 15px;
+
+
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+#country {
+    cursor: url(6.cur), auto;
+}
 
 #fnametext, #lnametext, #email, #age, #country{
     margin: 10px;
@@ -174,9 +198,8 @@ html {
     letter-spacing: 0.5em;
     width: 200px;
     left: 350px;
-    color: black;
     margin-left: 285px;
-    cursor: url(13.cur), auto;
+    padding-left: 20px;
 }
 
 #option1, #option2, #option3, #option4, #option5 {
@@ -198,7 +221,7 @@ label[id="option2"],label[id="option1"] {
 #brandSelect {
     width: 800px;
 }
-.square {
+.square-box {
   height: 30px;
   width: 30px;
   background-color: #555;
@@ -209,11 +232,25 @@ label[id="option2"],label[id="option1"] {
 
 }
 
-.square:hover {
-    box-shadow: 0px 0px 40px 15px #47B0B5;
+.square-box:hover {
+    box-shadow: 0px 0px 40px 10px #47B0B5;
 
     
 }
+
+#some-element {
+    display: none;
+}
+
+#some-element:active {
+    visibility: visible;
+}
+
+#square2:hover, #some-element {
+}
+
+
+
 
 input[type='checkbox'], #option1, #option2, #option3, #option4, #option5 {
     cursor: url(6.cur), auto;

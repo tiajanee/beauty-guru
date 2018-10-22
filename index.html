@@ -44,11 +44,13 @@
             <div class="box c">
                 <div class="ontop" id="form_div">
                 <form id="form">
+                    <div class="formDiv">
                     <label id="deetsLabel">1. personal deets:</label> <br>
+
                     <input type="text" name="first_name" placeholder="first name" id="fnametext"> <br>
                     <input type="text" name="last_name" placeholder="last name" id="lnametext"> <br>
                     <input type="email" name="email" placeholder="email" id="email"><br>
-                    <input type="number" name="age" placeholder="age" id="age" min=13 max=100 maxlength="3"><br>
+                    <input     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" name="age" placeholder="age" id="age" min="13" max="100" maxlength="2"><br>
                     <div class="custom-select">
                         <select id="country">
                             <option value="AF">Afghanistan</option>
@@ -303,7 +305,11 @@
 
                                     </select>
                         </div>
-                    
+                        
+                        <!--div closing for personal deets question-->
+                        </div>
+
+                    <div class="formDiv">
                     <div class="checkgroup">
                         <label id="priceQ">2. preferred price range (check all that apply):</label><br>
                         <label id="option1"><input type="checkbox" name="price_range" value="lowest" > $0-$10 </label>
@@ -312,55 +318,60 @@
                         <label id="option4"><input type="checkbox" name="price_range" value="higher" > $40-$60 </label><br>
                         <label id="option5"><input type="checkbox" name="price_range" value="highest" > $60+ </label><br>
                     </div> 
+                    </div>
                     
-                    
-                    
+                    <div class="formDiv">
                     <label id="toneQ">3. truest skin tone: </label><br>
                     <div id="skinToneOptions">
-                        <div id="square1" class="square">
+                        <div id="square1" class="square-box">
                         </div>
-                        <div id="square2" class="square"></div>
-                        <div id="square3"class="square"></div>
-                        <div id="square4"class="square"></div>
-                        <div id="square5" class="square"></div>
-                        <div id="square6" class="square"></div>
-                        <div id="square7"class="square"></div>
-                        <div id="square8"class="square"></div>
-                        <div id="square9"class="square"></div>
-                        <div id="square10"class="square"></div>
-                        <div id="square11"class="square"></div>
-                        <div id="square12" class="square"></div>
-                        <div id="square13"class="square"></div>
-                        <div id="square14"class="square"></div>
-                        <div id="square15"class="square"></div>
-                        <div id="square16"class="square"></div>
-                        <div id="square17"class="square"></div>
-                        <div id="square18"class="square"></div>
-                        <div id="square19"class="square"></div>
-                        <div id="square20"class="square"></div>
-                        <div id="square21"class="square"></div>
-                        <div id="square22"class="square"></div>
-                        <div id="square23"class="square"></div>
-                        <div id="square24"class="square"></div>
-                        <div id="square25"class="square"></div>
-                        <div id="square26"class="square"></div>
-                        <div id="square27"class="square"></div>
-                        <div id="square28" class="square"></div>
-                        <div id="square29"class="square"></div>
-                        <div id="square30"class="square"></div>
-                        <div id="square31"class="square"></div>
-                        <div id="square32"class="square"></div>
-                        <div id="square33"class="square"></div>
-                        <div id="square34"class="square"></div>
-                        <div id="square35"class="square"></div>
-                        <div id="square36"class="square"></div>
-                        <div id="square37"class="square"></div>
-                        <div id="square38"class="square"></div>
-                        <div id="square39"class="square"></div>
-                        <div id="square40"class="square"></div>
+                        <div id="square2" class="square-box">
+                              <span id="some-element">warm peach</span>
+                        </div>
+                        <div id="square3"class="square-box"></div>
+                        <div id="square4"class="square-box"></div>
+                        <div id="square5" class="square-box"></div>
+                        <div id="square6" class="square-box"></div>
+                        <div id="square7"class="square-box"></div>
+                        <div id="square8"class="square-box"></div>
+                        <div id="square9"class="square-box"></div>
+                        <div id="square10"class="square-box"></div>
+                        <div id="square11"class="square-box"></div>
+                        <div id="square12" class="square-box"></div>
+                        <div id="square13"class="square-box"></div>
+                        <div id="square14"class="square-box"></div>
+                        <div id="square15"class="square-box"></div>
+                        <div id="square16"class="square-box"></div>
+                        <div id="square17"class="square-box"></div>
+                        <div id="square18"class="square-box"></div>
+                        <div id="square19"class="square-box"></div>
+                        <div id="square20"class="square-box"></div>
+                        <div id="square21"class="square-box"></div>
+                        <div id="square22"class="square-box"></div>
+                        <div id="square23"class="square-box"></div>
+                        <div id="square24"class="square-box"></div>
+                        <div id="square25"class="square-box"></div>
+                        <div id="square26"class="square-box"></div>
+                        <div id="square27"class="square-box"></div>
+                        <div id="square28" class="square-box"></div>
+                        <div id="square29"class="square-box"></div>
+                        <div id="square30"class="square-box"></div>
+                        <div id="square31"class="square-box"></div>
+                        <div id="square32"class="square-box"></div>
+                        <div id="square33"class="square-box"></div>
+                        <div id="square34"class="square-box"></div>
+                        <div id="square35"class="square-box"></div>
+                        <div id="square36"class="square-box"></div>
+                        <div id="square37"class="square-box"></div>
+                        <div id="square38"class="square-box"></div>
+                        <div id="square39"class="square-box"></div>
+                        <div id="square40"class="square-box"></div>
                     </div>
+                    </div>
+
                     <br>
                     <br>
+                    <div class="formDiv">
                     <div id="brandSelect">
                         <span id="brandQ"> 4. brand selection (select all that apply)</span><br>
                         
@@ -387,6 +398,7 @@
                     <label class=brand id="brand1"><input type="checkbox" > Honest Beauty </label>
                     <label class=brand id="brand1"><input type="checkbox" > L'Oréal </label> <br>
                     
+                </div>
                 </div>
                 
                 <div id="buttonDiv">
